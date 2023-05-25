@@ -30,3 +30,42 @@ Content-Type: application/json
       }
    ]
 }
+###
+GET http://localhost:5000/api/get-family?page=0&pageSize=1&search=Curtis
+Content-Type: application/json
+
+
+
+
+###
+POST http://localhost:5000/api/update
+Content-Type: application/json
+
+{
+  "household_id": "646f72b7fb9a3a683f2626dd",
+  "first_name": "MAMAMAMA",
+  "last_name": "Schuppe",
+  "middle_name": "Garth Feil",
+  "age": "1111",
+  "alias": "Accusamus in repellat ratione.",
+  "civil_status": "Myra Block"
+}
+
+###
+POST http://localhost:5000/api/delete
+Content-Type: application/json
+
+{
+  "household_id": "646f72b7fb9a3a683f2626dd",
+  "first_name": "MAMAMAMA",
+  "last_name": "Schuppe",
+  "middle_name": "Garth Feil",
+  "age": "1111",
+  "alias": "Accusamus in repellat ratione.",
+  "civil_status": "Myra Block"
+}
+
+###
+GET http://localhost:5000/api/get-family/data?id=646f72b7fb9a3a683f2626dd
+Content-Type: application/json
+

@@ -8,10 +8,12 @@ module.exports = (mongoose) => {
       age: { type: String },
       alias: { type: String },
       civil_status: { type: String },
-      household_members_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "households",
-      },
+      household_members_id: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "household_members",
+        },
+      ],
     },
     { timestamps: true }
   );
