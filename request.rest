@@ -1,0 +1,32 @@
+##
+POST http://localhost:5000/api/create
+Content-Type: application/json
+
+{
+   "household_name":{
+      "household_name":"Flo Hills",
+      "address":"821 Mina Light",
+      "house_status":"Renting",
+      "house_number": 1
+   },
+   "household_members":[
+      {
+         "first_name":"Janelle",
+         "last_name":"Dooley",
+         "middle_name":"Fredrick Marks",
+         "age":121,
+         "alias":"Eos recusandae voluptas voluptas sint.",
+         "civil_status":"Jed Nader",
+         "id":0.2527608328853397
+      },
+        {
+         "first_name":"Janelle",
+         "last_name":"Dooley",
+         "middle_name":"Fredrick Marks",
+         "age":121,
+         "alias":"Eos recusandae voluptas voluptas sint.",
+         "civil_status":"Jed Nader",
+         "id":0.2527608328853397
+      }
+   ]
+}
