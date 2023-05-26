@@ -2,6 +2,7 @@ const db = require("../../apps/models");
 
 module.exports = async () => {
   try {
+    db.mongoose.set("strictQuery", true);
     await db.mongoose
       .connect(db.url, {
         useNewUrlParser: true,
