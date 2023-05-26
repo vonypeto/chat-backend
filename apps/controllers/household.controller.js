@@ -17,13 +17,7 @@ exports.createHouseHold = async (req, res) => {
 
     const houseHoldData = new HouseHoldMembers(houseHoldMemberData);
     await houseHoldData.save();
-    // household_members.map(async (i) => {
-    //   const HouseHoldMemberTmp = i;
-    //   HouseHoldMemberTmp.household_members_id = houseHoldId;
-    //   HouseHoldMemberTmp._id = new mongoose.Types.ObjectId();
-    //   const houseHoldMembersData = new HouseHoldMembers(HouseHoldMemberTmp);
-    //   await houseHoldMembersData.save();
-    // });
+
     res.json("saved");
   } catch (error) {
     console.log(error.message);
@@ -31,7 +25,6 @@ exports.createHouseHold = async (req, res) => {
 };
 
 exports.getHouseHold = async (req, res) => {
-  // const household_members = req.body.household_members;
   try {
     let limit = parseInt(req.query.pageSize) || 10;
     limit = pageSizeOptions.includes(limit) ? limit : pageSizeOptions[0];
@@ -61,7 +54,6 @@ exports.getHouseHold = async (req, res) => {
 };
 
 exports.updateHouseHold = async (req, res) => {
-  // const household_members = req.body.household_members;
   try {
     const updateHouseHold = await HouseHoldMembers.findOneAndUpdate(
       {
@@ -86,7 +78,6 @@ exports.updateHouseHold = async (req, res) => {
 };
 
 exports.deleteHouseHold = async (req, res) => {
-  // const household_members = req.body.household_members;
   try {
     console.log(req.body);
 
@@ -100,7 +91,6 @@ exports.deleteHouseHold = async (req, res) => {
 };
 
 exports.getHouseHoldSpecificData = async (req, res) => {
-  // const household_members = req.body.household_members;
   try {
     const houseHoldData = await HouseHoldMembers.find({
       _id: req.query.id,
