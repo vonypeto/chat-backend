@@ -1,4 +1,4 @@
-const db = require("../../apps/models");
+const db = require("@src/models");
 
 module.exports = async () => {
   try {

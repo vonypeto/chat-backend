@@ -1,3 +1,4 @@
+require("module-alias/register");
 require("dotenv").config();
 
 // Declare Middleware
@@ -9,7 +10,13 @@ const http = require("http");
 const server = http.createServer(app);
 
 // Declare Connection
-const connectionDatabase = require("./apps/config/db.connection");
+const connectionDatabase = require("@src/config/db.connection");
+
+// test modules
+// moduleAlias.addAliases({
+//   "@lib": __dirname + "/src",
+// });
+// console.log(__dirname + "/src");
 
 // Database & Firebase Connection
 connectionDatabase();
@@ -18,7 +25,7 @@ connectionDatabase();
 app.use(cors());
 app.use(bodyParser.json());
 // Routes
-require("./apps/routes/")(app);
+require("@src/routes")(app);
 
 // Welcome page
 app.get("/", (req, res) => {

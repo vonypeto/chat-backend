@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("@src/models");
 var mongoose = require("mongoose");
 const HouseHoldMembers = db.household_members;
 const HouseHoldName = db.households;
