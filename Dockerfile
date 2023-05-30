@@ -13,9 +13,14 @@ COPY . .
 
 ENV PORT=5000
 
+ENV ATLAS_URI=mongodb+srv://vonypet:hetC55yOwwjI7ySR@cluster0.ljfkg0l.mongodb.net/family?retryWrites=true&w=majority
+
 EXPOSE 5000
 
 CMD ["npm","start"]
+
+
+
 # RUN --mount=type=cache,id=pnpm-store,target=/root/.pnpm-store \
 #     pnpm install --frozen-lockfile && \
 #     pnpm build
