@@ -8,17 +8,15 @@ const app = express();
 const bodyParser = require("body-parser");
 const http = require("http");
 const server = http.createServer(app);
-
+const { Server } = require("socket.io");
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000",
+  },
+});
 // Declare Connection
 const connectionDatabase = require("@src/config/db.connection");
 
-// test modules
-// moduleAlias.addAliases({
-//   "@lib": __dirname + "/src",
-// });
-// console.log(__dirname + "/src");
-
-// Database & Firebase Connection
 connectionDatabase();
 
 // Middleware
@@ -26,7 +24,8 @@ app.use(cors());
 app.use(bodyParser.json());
 // Routes
 require("@src/routes")(app);
-
+// Socket
+require("@src/sockets")(io);
 // Welcome page
 app.get("/", (req, res) => {
   res.send("Hi :)");

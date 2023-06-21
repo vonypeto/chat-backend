@@ -1,3 +1,3 @@
 module.exports = (app) => {
-  require("./household.routes")(app);
+  require("./accounts.routes")(app);
 };

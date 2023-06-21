@@ -69,3 +69,17 @@ Content-Type: application/json
 GET http://localhost:5000/api/get-family/data?id=646f72b7fb9a3a683f2626dd
 Content-Type: application/json
 
+###
+POST https://randommer.io/Name
+Content-Type:  application/x-www-form-urlencoded; charset=UTF-8
+
+type=firstname&number=20&X-Requested-With=XMLHttpRequest
+
+
+###
+POST http://localhost:5000/api/signup
+Content-Type: application/json
+
+
+
+{"uid":"RqoDBhE0XJZnpP7dh8fyu2uqaMXK2","username":"Kylei1gh","email":"your.email+fakedata452532@gmail.com"}
