@@ -5,13 +5,7 @@ module.exports = (mongoose) => {
       participants: [
         {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "users",
-        },
-      ],
-      messages: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "messages",
+          ref: "accounts",
         },
       ],
     },

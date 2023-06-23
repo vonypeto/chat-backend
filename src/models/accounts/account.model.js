@@ -6,6 +6,12 @@ module.exports = (mongoose) => {
       status: { type: String },
       uid: { type: String },
       email: { type: String },
+      conversation_id: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "conversations",
+        },
+      ],
     },
     { timestamps: true }
   );

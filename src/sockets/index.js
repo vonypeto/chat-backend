@@ -38,7 +38,6 @@ module.exports = (io) => {
       const recipientSocket = connectedUsers.find(
         (user) => user.id === recipientId
       );
-      console.log(recipientSocket);
 
       if (recipientSocket) {
         console.log(recipientSocket);

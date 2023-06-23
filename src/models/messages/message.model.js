@@ -3,9 +3,14 @@ module.exports = (mongoose) => {
     {
       _id: { type: mongoose.Schema.Types.ObjectId },
       message: { type: String },
+      senderId: { type: String },
       account_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "accounts",
+      },
+      conversation_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "conversations",
       },
       unread: { type: Boolean },
     },

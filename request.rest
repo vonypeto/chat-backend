@@ -83,3 +83,18 @@ Content-Type: application/json
 
 
 {"uid":"RqoDBhE0XJZnpP7dh8fyu2uqaMXK2","username":"Kylei1gh","email":"your.email+fakedata452532@gmail.com"}
+
+###
+###
+POST http://localhost:5000/api/send_message
+Content-Type: application/json
+
+
+
+{"uid":"RqoDBhE0XJZnpP7dh8fyu2uqaMXK2","username":"Kylei1gh","email":"your.email+fakedata452532@gmail.com"}
+
+###
+GET http://localhost:5000/api/get_messages/yBqZEsowXtVMISNdRnDqX76oEnE3
+Content-Type: application/json
+
+

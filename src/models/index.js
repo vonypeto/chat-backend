@@ -8,5 +8,6 @@ db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.accounts = require("./accounts/account.model.js")(mongoose);
 db.messages = require("./messages/message.model.js")(mongoose);
+db.conversation = require("./conversations/conversation.model.js")(mongoose);
 
 module.exports = db;
